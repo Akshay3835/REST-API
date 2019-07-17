@@ -1,51 +1,104 @@
 package com.bridgelabz.sampleretrofit;
 
-import com.google.gson.annotations.SerializedName;
-
 public class UserModel
 {
 
-    private int userId;
+    private String userId;
+    private String firstName;
+    private String lastName;
+    private String role;
+    private String phoneNumber;
+    private String imageUrl;
+    private String service;
+    private String userName;
+    private String email;
+    private String password;
+    private String id;
 
-    private Integer id;
 
-    private String title;
-
-    @SerializedName("body")
-    private String text;
-
-
-    public UserModel(int userId, String title, String text)
-    {
+    public UserModel(String userId, String firstName, String lastName, String role,
+                     String phoneNumber, String imageUrl, String service, String userName,
+                     String email, String password, String id) {
         this.userId = userId;
-        this.title = title;
-        this.text = text;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
+        this.phoneNumber = phoneNumber;
+        this.imageUrl = imageUrl;
+        this.service = service;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.id = id;
     }
 
 
 
-    public int getUserId() {
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public String getService() {
+        return service;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getUserId() {
         return userId;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getPassword()
+    {
+        return password;
     }
 
-    public String getText() {
-        return text;
-    }
+
 
     public String toString()
     {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("UserId :").append(userId).append("\n")
-                .append("Title : ").append(title).append("\n")
-                .append("Text :").append(text).append("\n");
+                .append("FirstName : ").append(firstName).append("\n")
+                .append("LastName :").append(lastName).append("\n")
+                .append("Role :").append(role).append("\n")
+                .append("PhoneNumber :").append(phoneNumber).append("\n")
+                .append("ImageUrl : ").append(imageUrl).append("\n")
+                .append("Service :").append(service).append("\n")
+                .append("UserName : ").append(userName).append("\n")
+                .append("Email : ").append(email).append("\n")
+                .append("Password :").append(password).append("\n")
+                .append("Id : ").append(id).append("\n");
+
+
 
                 return stringBuilder.toString();
     }
